@@ -29,7 +29,6 @@ export default function Sidebar() {
 
   return (
     <aside className="w-80 bg-bin-900 border-r border-bin-700 flex flex-col h-full">
-      {/* Header */}
       <div className="p-4 border-b border-bin-700">
         <div className="flex items-center gap-3 mb-4">
           <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-bin-accent to-purple-600 flex items-center justify-center">
@@ -54,7 +53,6 @@ export default function Sidebar() {
         </button>
       </div>
 
-      {/* Conversations */}
       <div className="flex-1 overflow-y-auto p-3 space-y-2">
         {conversations.map(conv => (
           <div
@@ -96,7 +94,6 @@ export default function Sidebar() {
         )}
       </div>
 
-      {/* Footer */}
       <div className="p-4 border-t border-bin-700">
         <button className="flex items-center gap-2 text-sm text-bin-400 hover:text-bin-200 transition-colors">
           <Settings size={16} />
