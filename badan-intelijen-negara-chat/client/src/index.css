@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+@layer base {
+  body {
+    @apply bg-bin-950 text-bin-100 font-sans antialiased;
+    overflow-x: hidden;
+  }
+  
+  ::selection {
+    @apply bg-bin-accent text-white;
+  }
+  
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    @apply bg-bin-900;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    @apply bg-bin-600 rounded-full;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-bin-500;
+  }
+}
+
+@layer components {
+  .glass-panel {
+    @apply bg-bin-800/60 backdrop-blur-xl border border-bin-700/50 rounded-xl;
+  }
+  
+  .neon-border {
+    @apply border border-bin-accent/30 shadow-[0_0_15px_rgba(255,42,109,0.15)];
+  }
+  
+  .code-block {
+    @apply bg-bin-950 rounded-lg p-4 font-mono text-sm overflow-x-auto;
+  }
+}
