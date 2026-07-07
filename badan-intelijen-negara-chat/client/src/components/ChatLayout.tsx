@@ -40,7 +40,6 @@ export default function ChatLayout() {
 
   return (
     <div className="flex-1 flex flex-col h-full bg-bin-950 relative">
-      {/* Chat Header */}
       <div className="h-16 border-b border-bin-700 flex items-center justify-between px-6 bg-bin-900/50 backdrop-blur">
         <div className="flex items-center gap-3">
           <div className={`w-2 h-2 rounded-full ${isGenerating ? 'bg-bin-warning animate-pulse' : 'bg-bin-success'}`} />
@@ -59,7 +58,6 @@ export default function ChatLayout() {
         </div>
       </div>
 
-      {/* Messages */}
       <div className="flex-1 overflow-y-auto p-6 space-y-6">
         {currentConv.messages.length === 0 && (
           <div className="text-center py-12 text-bin-600">
@@ -83,7 +81,6 @@ export default function ChatLayout() {
         <div ref={messagesEndRef} />
       </div>
 
-      {/* Input */}
       <ChatInput />
     </div>
   );
