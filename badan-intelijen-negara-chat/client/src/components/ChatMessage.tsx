@@ -22,7 +22,6 @@ export default function ChatMessage({ message }: Props) {
 
   return (
     <div className={`flex gap-4 ${isUser ? 'flex-row-reverse' : ''} animate-slide-up`}>
-      {/* Avatar */}
       <div className={`shrink-0 w-8 h-8 rounded-lg flex items-center justify-center ${
         isUser 
           ? 'bg-bin-accent/20 border border-bin-accent/30' 
@@ -31,7 +30,6 @@ export default function ChatMessage({ message }: Props) {
         {isUser ? <User size={16} className="text-bin-accent" /> : <Bot size={16} className="text-bin-accent2" />}
       </div>
 
-      {/* Content */}
       <div className={`flex-1 max-w-3xl ${isUser ? 'items-end' : 'items-start'} flex flex-col`}>
         <div className={`w-full p-4 rounded-xl ${
           isUser 
