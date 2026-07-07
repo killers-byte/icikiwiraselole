@@ -1,0 +1,22 @@
+{
+  "name": "Badan_Intelijen_Negara",
+  "image": "mcr.microsoft.com/devcontainers/typescript-node:20",
+  "features": {
+    "ghcr.io/devcontainers/features/github-cli:1": {}
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "bradlc.vscode-tailwindcss",
+        "esbenp.prettier-vscode",
+        "dbaeumer.vscode-eslint"
+      ],
+      "settings": {
+        "terminal.integrated.defaultProfile.linux": "bash"
+      }
+    }
+  },
+  "forwardPorts": [3001, 5173],
+  "postCreateCommand": "npm install && cd client && npm install && cd ../server && npm install",
+  "postStartCommand": "npm run dev"
+}
