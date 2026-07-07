@@ -32,11 +32,10 @@ interface ChatState {
   sidebarOpen: boolean;
   toolPanelOpen: boolean;
   
-  // Actions
   initWebSocket: () => void;
   sendMessage: (content: string) => void;
   clearConversation: () => void;
-  createConversation: () => void;
+  createConversation: () => string;
   setActiveConversation: (id: string) => void;
   deleteConversation: (id: string) => void;
   toggleTool: (tool: string) => void;
