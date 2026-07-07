@@ -31,7 +31,6 @@ export default function ChatInput() {
 
   return (
     <div className="border-t border-bin-700 bg-bin-900/80 backdrop-blur p-4">
-      {/* Active Tools Bar */}
       {activeTools.length > 0 && (
         <div className="flex gap-2 mb-3 flex-wrap">
           {activeTools.map(tool => (
